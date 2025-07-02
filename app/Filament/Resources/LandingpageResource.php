@@ -39,6 +39,26 @@ class LandingpageResource extends Resource
             ->schema([
                 Tabs::make('Tabs')
                 ->tabs([
+                    Tab::make('Website Details')
+                        ->schema([
+                            TextInput::make('website_title')->label('Website Title'),
+                            FileUpload::make('image')
+                                ->disk('public')
+                                ->directory('landingpage/website_logo')
+                                ->getUploadedFileNameForStorageUsing(
+                                    fn(TemporaryUploadedFile $file): string => 'logo_' . rand(1, 1000) . '_' . date('His_dmY') . '.' . pathinfo($file->getClientOriginalName(), PATHINFO_EXTENSION)
+                                )
+                                ->openable()
+                                ->downloadable()
+                                // ->image('jpg')
+                                ->imageEditor()
+                                ->imageEditorAspectRatios([
+                                    '16:9',
+                                    '4:3',
+                                    '1:1',
+                                ]),
+                            Textarea::make('deskripsi')->label('Deskripsi'),
+                        ]),
                     Tab::make('Home Section')
                         ->schema([
                             Repeater::make('home_section')

@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Landingpage extends Model
 {
     protected $casts = [
+        'website_title',
+        'logo_website',
+        'deskripsi',
         'home_section' => 'array',
         'section_2' => 'array',
         'sub_title',
@@ -17,6 +20,9 @@ class Landingpage extends Model
     ];
 
     protected $fillable = [
+        'website_title',
+        'logo_website',
+        'deskripsi',
         'home_section',
         'section_2',
         'sub_title',

@@ -42,7 +42,7 @@ class LandingpageResource extends Resource
                     Tab::make('Website Details')
                         ->schema([
                             TextInput::make('website_title')->label('Website Title'),
-                            FileUpload::make('image')
+                            FileUpload::make('website_logo')
                                 ->disk('public')
                                 ->directory('landingpage/website_logo')
                                 ->getUploadedFileNameForStorageUsing(
@@ -57,7 +57,8 @@ class LandingpageResource extends Resource
                                     '4:3',
                                     '1:1',
                                 ]),
-                            Textarea::make('deskripsi')->label('Deskripsi'),
+                            Textarea::make('deskripsi')->label('Deskripsi')
+                                ->rows(15),
                         ]),
                     Tab::make('Home Section')
                         ->schema([

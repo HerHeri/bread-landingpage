@@ -4,15 +4,15 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Flone - Minimalist eCommerce Bootstrap 4 Template - SHARED ON THEMELOCK.COM</title>
+    <title>{{ $lp->website_title ?? 'Bread'   }} - Landingpage</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="{{ url('/') }}/assets/img/favicon.png">
-    
+
     <!-- CSS
 	============================================ -->
-   
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ url('/') }}/assets/css/bootstrap.min.css">
     <!-- CormorantGaramond font -->
@@ -32,113 +32,17 @@
     <div class="container">
         <div class="header-top-area">
             <div class="row">
-                {{-- <div class="col-lg-5 col-md-8 col-12">
-                    <div class="language-currency-wrap">
-                        <div class="same-language-currency language-style">
-                            <a href="#">English <i class="fa fa-angle-down"></i></a>
-                            <div class="lang-car-dropdown">
-                                <ul>
-                                    <li><a href="#">Arabic </a></li>
-                                    <li><a href="#">Bangla </a></li>
-                                    <li><a href="#">Hindi  </a></li>
-                                    <li><a href="#">Spanish </a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="same-language-currency use-style">
-                            <a href="#">USD  <i class="fa fa-angle-down"></i></a>
-                            <div class="lang-car-dropdown">
-                                <ul>
-                                    <li><a href="#">Taka (BDT) </a></li>
-                                    <li><a href="#">Riyal (SAR) </a></li>
-                                    <li><a href="#">Rupee (INR)  </a></li>
-                                    <li><a href="#">Dirham (AED) </a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="same-language-currency">
-                            <p>Call Us 3965410</p>
-                        </div>
-                    </div>
-                </div> --}}
                 <div class="col-lg-2 d-none d-lg-block">
                     <div class="logo-hm9 text-center">
-                        <a href="index.html">
-                            <img alt="" src="{{ url('/') }}/assets/img/logo/logo.png">
+                        <a href="javascript:void(0)">
+                            @if($lp->website_logo)
+                                <img alt="" src="{{ asset('storage/'.$lp->website_logo) }}">
+                            @else
+                                <h2 style="font-weight: 600; letter-spacing: 3px;">{{ $lp->website_title }}</h2>
+                            @endif
                         </a>
                     </div>
                 </div>
-                {{-- <div class="col-lg-5 col-md-4 col-12">
-                    <div class="header-right-wrap">
-                        <div class="same-style header-search">
-                            <a class="search-active" href="#"><i class="pe-7s-search"></i></a>
-                            <div class="search-content">
-                                <form action="#">
-                                    <input type="text" placeholder="Search" />
-                                    <button class="button-search"><i class="pe-7s-search"></i></button>
-                                </form>
-                            </div> 
-                        </div>
-                        <div class="same-style account-satting">
-                            <a class="account-satting-active" href="#"><i class="pe-7s-user-female"></i></a>
-                            <div class="account-dropdown">
-                                <ul>
-                                    <li><a href="login-register.html">Login</a></li>
-                                    <li><a href="login-register.html">Register</a></li>
-                                    <li><a href="wishlist.html">Wishlist  </a></li>
-                                    <li><a href="my-account.html">my account</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="same-style header-wishlist">
-                            <a href="wishlist.html"><i class="pe-7s-like"></i></a>
-                        </div>
-                        <div class="same-style cart-wrap">
-                            <button class="icon-cart">
-                                <i class="pe-7s-shopbag"></i>
-                                <span class="count-style">02</span>
-                            </button>
-                            <div class="shopping-cart-content">
-                                <ul>
-                                    <li class="single-shopping-cart">
-                                        <div class="shopping-cart-img">
-                                            <a href="#"><img alt="" src="{{ url('/') }}/assets/img/cart/cart-1.png"></a>
-                                        </div>
-                                        <div class="shopping-cart-title">
-                                            <h4><a href="#">T- Shart & Jeans </a></h4>
-                                            <h6>Qty: 02</h6>
-                                            <span>$260.00</span>
-                                        </div>
-                                        <div class="shopping-cart-delete">
-                                            <a href="#"><i class="fa fa-times-circle"></i></a>
-                                        </div>
-                                    </li>
-                                    <li class="single-shopping-cart">
-                                        <div class="shopping-cart-img">
-                                            <a href="#"><img alt="" src="{{ url('/') }}/assets/img/cart/cart-2.png"></a>
-                                        </div>
-                                        <div class="shopping-cart-title">
-                                            <h4><a href="#">T- Shart & Jeans </a></h4>
-                                            <h6>Qty: 02</h6>
-                                            <span>$260.00</span>
-                                        </div>
-                                        <div class="shopping-cart-delete">
-                                            <a href="#"><i class="fa fa-times-circle"></i></a>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <div class="shopping-cart-total">
-                                    <h4>Shipping : <span>$20.00</span></h4>
-                                    <h4>Total : <span class="shop-total">$260.00</span></h4>
-                                </div>
-                                <div class="shopping-cart-btn btn-hover text-center">
-                                    <a class="default-btn" href="cart-page.html">view cart</a>
-                                    <a class="default-btn" href="checkout.html">checkout</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
             </div>
         </div>
     </div>
@@ -147,248 +51,55 @@
             <div class="row">
                 <div class="col-12 d-block d-lg-none">
                     <div class="logo">
-                        <a href="index.html">
-                            <img alt="" src="{{ url('/') }}/assets/img/logo/logo.png">
+                        <a href="javascript:void(0)">
+                            @if($lp->website_logo)
+                                    <img alt="" src="{{ asset('storage/'.$lp->website_logo) }}">
+                                @else
+                                    <h2 style="font-weight: 600; letter-spacing: 3px;">{{ $lp->website_title }}</h2>
+                                @endif
                         </a>
                     </div>
                 </div>
-                {{-- <div class="col-xl-12 col-lg-12 d-none d-lg-block">
-                    <div class="main-menu">
-                        <nav>
-                            <ul>
-                                <li><a href="index.html">Home <i class="fa fa-angle-down"></i></a>
-                                    <ul class="submenu">
-                                        <li><a href="index.html">home version 1</a></li>
-                                        <li><a href="index-2.html">home version 2</a></li>
-                                        <li><a href="index-3.html">home version 3</a></li>
-                                        <li><a href="index-4.html">home version 4</a></li>
-                                        <li><a href="index-5.html">home version 5</a></li>
-                                        <li><a href="index-6.html">home version 6</a></li>
-                                        <li><a href="index-7.html">home version 7</a></li>
-                                        <li><a href="index-8.html">home version 8</a></li>
-                                        <li><a href="index-9.html">home version 9</a></li>
-                                        <li><a href="index-10.html">home version 10</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="shop.html"> Shop <i class="fa fa-angle-down"></i> </a>
-                                    <ul class="mega-menu">
-                                        <li>
-                                            <ul>
-                                                <li class="mega-menu-title"><a href="#">shop layout</a></li>
-                                                <li><a href="shop.html">standard style</a></li>
-                                                <li><a href="shop-filter.html">Grid filter style</a></li>
-                                                <li><a href="shop-grid-2-col.html">Grid 2 column</a></li>
-                                                <li><a href="shop-no-sidebar.html">Grid No sidebar</a></li>
-                                                <li><a href="shop-grid-fw.html">Grid full wide </a></li>
-                                                <li><a href="shop-right-sidebar.html">Grid right sidebar</a></li>
-                                                <li><a href="shop-list.html">list 1 column box </a></li>
-                                                <li><a href="shop-list-fw.html">list 1 column full wide </a></li>
-                                                <li><a href="shop-list-fw-2col.html">list 2 column  full wide</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <ul>
-                                                <li class="mega-menu-title"><a href="#">product details</a></li>
-                                                <li><a href="product-details.html">tab style 1</a></li>
-                                                <li><a href="product-details-2.html">tab style 2</a></li>
-                                                <li><a href="product-details-3.html">tab style 3</a></li>
-                                                <li><a href="product-details-4.html">sticky style</a></li>
-                                                <li><a href="product-details-5.html">gallery style </a></li>
-                                                <li><a href="product-details-slider-box.html">Slider style</a></li>
-                                                <li><a href="product-details-affiliate.html">affiliate style</a></li>
-                                                <li><a href="product-details-6.html">fixed image style </a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <ul>
-                                                <li class="mega-menu-img"><a href="shop.html"><img src="{{ url('/') }}/assets/img/banner/banner-12.png" alt=""></a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="shop.html">Collection</a></li>
-                                <li><a href="#"> Pages <i class="fa fa-angle-down"></i></a>
-                                    <ul class="submenu">
-                                        <li><a href="about.html">about us</a></li>
-                                        <li><a href="cart-page.html">cart page</a></li>
-                                        <li><a href="checkout.html">checkout </a></li>
-                                        <li><a href="wishlist.html">wishlist </a></li>
-                                        <li><a href="my-account.html">my account</a></li>
-                                        <li><a href="login-register.html">login / register </a></li>
-                                        <li><a href="contact.html">contact us </a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="blog.html">Blog <i class="fa fa-angle-down"></i></a>
-                                    <ul class="submenu">
-                                        <li><a href="blog.html">blog standard</a></li>
-                                        <li><a href="blog-no-sidebar.html">blog no sidebar</a></li>
-                                        <li><a href="blog-right-sidebar.html">blog right sidebar</a></li>
-                                        <li><a href="blog-details.html">blog details 1</a></li>
-                                        <li><a href="blog-details-2.html">blog details 2</a></li>
-                                        <li><a href="blog-details-3.html">blog details 3</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="about.html"> About </a></li>
-                                <li><a href="contact.html"> Contact</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div> --}}
             </div>
-            {{-- <div class="mobile-menu-area">
-                <div class="mobile-menu">
-                    <nav id="mobile-menu-active">
-                        <ul class="menu-overflow">
-                            <li><a href="index.html">HOME</a>
-                                <ul>
-                                    <li><a href="index.html">home version 1</a></li>
-                                    <li><a href="index-2.html">home version 2</a></li>
-                                    <li><a href="index-3.html">home version 3</a></li>
-                                    <li><a href="index-4.html">home version 4</a></li>
-                                    <li><a href="index-5.html">home version 5</a></li>
-                                    <li><a href="index-6.html">home version 6</a></li>
-                                    <li><a href="index-7.html">home version 7</a></li>
-                                    <li><a href="index-8.html">home version 8</a></li>
-                                    <li><a href="index-9.html">home version 9</a></li>
-                                    <li><a href="index-10.html">home version 10</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="shop.html">Shop</a>
-                                <ul>
-                                    <li><a href="#">shop layout</a>
-                                        <ul>
-                                            <li><a href="shop.html">standard style</a></li>
-                                            <li><a href="shop-filter.html">Grid filter style</a></li>
-                                            <li><a href="shop-grid-2-col.html">Grid 2 column</a></li>
-                                            <li><a href="shop-no-sidebar.html">Grid No sidebar</a></li>
-                                            <li><a href="shop-grid-fw.html">Grid full wide </a></li>
-                                            <li><a href="shop-right-sidebar.html">Grid right sidebar</a></li>
-                                            <li><a href="shop-list.html">list 1 column box </a></li>
-                                            <li><a href="shop-list-fw.html">list 1 column full wide </a></li>
-                                            <li><a href="shop-list-fw-2col.html">list 2 column  full wide</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">product details</a>
-                                        <ul>
-                                            <li><a href="product-details.html">tab style 1</a></li>
-                                            <li><a href="product-details-2.html">tab style 2</a></li>
-                                            <li><a href="product-details-3.html">tab style 3</a></li>
-                                            <li><a href="product-details-4.html">sticky style</a></li>
-                                            <li><a href="product-details-5.html">gallery style </a></li>
-                                            <li><a href="product-details-slider-box.html">Slider style</a></li>
-                                            <li><a href="product-details-affiliate.html">affiliate style</a></li>
-                                            <li><a href="product-details-6.html">fixed image style </a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a href="shop.html">Collection</a></li>
-                            <li><a href="#">Pages</a>
-                                <ul>
-                                    <li><a href="about.html">about us</a></li>
-                                    <li><a href="cart-page.html">cart page</a></li>
-                                    <li><a href="checkout.html">checkout </a></li>
-                                    <li><a href="wishlist.html">wishlist </a></li>
-                                    <li><a href="my-account.html">my account</a></li>
-                                    <li><a href="login-register.html">login / register </a></li>
-                                    <li><a href="contact.html">contact us </a></li>
-                                </ul>
-                            </li>
-                            <li><a href="blog.html">Blog</a>
-                                <ul>
-                                    <li><a href="blog.html">blog standard</a></li>
-                                    <li><a href="blog-no-sidebar.html">blog no sidebar</a></li>
-                                    <li><a href="blog-right-sidebar.html">blog right sidebar</a></li>
-                                    <li><a href="blog-details.html">blog details 1</a></li>
-                                    <li><a href="blog-details-2.html">blog details 2</a></li>
-                                    <li><a href="blog-details-3.html">blog details 3</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="about.html">About us</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div> --}}
         </div>
     </div>
 </header>
 <div class="slider-area">
     <div class="slider-active owl-carousel nav-style-1">
-        <div class="slider-height-7 bg-glaucous d-flex align-items-center">
-            <div class="container">
-                <div class="row align-items-center slider-h9-mrg">
-                    <div class="col-lg-6 col-md-6 col-12 col-sm-6">
-                        <div class="slider-content-7 slider-animated-1">
-                            <h3 class="animated">New Arrival</h3>
-                            <h1 class="animated">New Design <br>Bluetooth Speaker</h1>
-                            <div class="slider-btn-9 btn-hover">
-                                <a class="animated" href="shop.html">SHOP NOW</a>
+        @foreach (json_decode($lp->home_section, true) as $slider)
+            <div class="slider-height-7 bg-glaucous d-flex align-items-center">
+                <div class="container">
+                    <div class="row align-items-center slider-h9-mrg">
+                        <div class="col-lg-6 col-md-6 col-12 col-sm-6">
+                            <div class="slider-content-7 slider-animated-1">
+                                <h3 class="animated">{{ $slider['title'] }}</h3>
+                                <h1 class="animated">{!! nl2br(e($slider['content'])) !!}</h1>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-12 col-sm-6">
-                        <div class="slider-singleimg-hm9 slider-animated-1">
-                            <img class="animated" src="{{ url('/') }}/assets/img/slider/single-slide-3.png" alt="">
+                        <div class="col-lg-6 col-md-6 col-12 col-sm-6">
+                            <div class="slider-singleimg-hm9 slider-animated-1 ml-100 mr-100">
+                                <img class="animated" src="{{ url($slider['image']) }}" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="slider-height-7 bg-glaucous d-flex align-items-center">
-            <div class="container">
-                <div class="row align-items-center slider-h9-mrg">
-                    <div class="col-lg-6 col-md-6 col-12 col-sm-6">
-                        <div class="slider-content-7 slider-animated-1">
-                            <h3 class="animated">New Arrival</h3>
-                            <h1 class="animated">New Design <br>Bluetooth Speaker</h1>
-                            <div class="slider-btn-9 btn-hover">
-                                <a class="animated" href="shop.html">SHOP NOW</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-12 col-sm-6">
-                        <div class="slider-singleimg-hm9 slider-animated-1 ml-100 mr-100">
-                            <img class="animated" src="{{ url('/') }}/assets/img/slider/single-slide-6.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @endforeach
     </div>
 </div>
 <div class="collections-area pb-95">
     <div class="container">
         <div class="collection-wrap-2">
             <div class="collection-active-2 owl-carousel">
-                <div class="collection-product-2">
-                    <a href="#"><img src="{{ url('/') }}/assets/img/product/hm9-cagi-1.jpg" alt=""></a>
-                    <div class="collection-content-2 text-center">
-                        <span>4 Products</span>
-                        <h4><a href="#">Bluetooth Speaker</a></h4>
+                @foreach (json_decode($lp->section_2) as $item)
+                    <div class="collection-product-2">
+                        <a href="#"><img src="{{ $item->avatar ? url('/storage/'.$item->avatar) : url('/assets/img/product/hm9-cagi-1.jpg') }}" alt=""></a>
+                        <div class="collection-content-2 text-center">
+                            {{-- <span>4 Products</span>
+                            <h4><a href="#">Bluetooth Speaker</a></h4> --}}
+                        </div>
                     </div>
-                </div>
-                <div class="collection-product-2">
-                    <a href="#"><img src="{{ url('/') }}/assets/img/product/hm9-cagi-2.jpg" alt=""></a>
-                    <div class="collection-content-2 text-center">
-                        <span>8 Products</span>
-                        <h4><a href="#">Bluetooth Headphone</a></h4>
-                    </div>
-                </div>
-                <div class="collection-product-2">
-                    <a href="#"><img src="{{ url('/') }}/assets/img/product/hm9-cagi-3.jpg" alt=""></a>
-                    <div class="collection-content-2 text-center">
-                        <span>9 Products</span>
-                        <h4><a href="#"> Kardon Aura Studio</a></h4>
-                    </div>
-                </div>
-                <div class="collection-product-2">
-                    <a href="#"><img src="{{ url('/') }}/assets/img/product/hm9-cagi-2.jpg" alt=""></a>
-                    <div class="collection-content-2 text-center">
-                        <span>4 Products</span>
-                        <h4><a href="#">Bluetooth Speaker</a></h4>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -396,843 +107,45 @@
 <div class="welcome-area pb-90">
     <div class="container">
         <div class="welcome-content text-center">
-            <h5>Who Are We</h5>
-            <h1>Welcome To Flone</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt labor et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo consequat irure </p>
+            <h5>{{ $lp->sub_title ?? '' }}</h5>
+            <h1>{{ $lp->title ?? '' }}</h1>
+            <p>{{ $lp->content ?? '' }}</p>
         </div>
     </div>
 </div>
 <div class="product-area pb-60 hm9-section-padding">
     <div class="container-fluid">
-        <div class="product-tab-list nav pb-55 text-center">
-            <a href="#product-1" data-toggle="tab" >
-                <h4>New Arrivals  </h4>
-            </a>
-            <a class="active" href="#product-2" data-toggle="tab">
-                <h4>Best Sellers </h4>
-            </a>
-            <a href="#product-3" data-toggle="tab">
-                <h4>Sale Items</h4>
-            </a>
-        </div>
         <div class="tab-content jump">
-            <div class="tab-pane" id="product-1">
+            <div class="tab-pane active" id="product-1">
                 <div class="custom-row-4">
-                    <div class="custom2-col-5">
-                        <div class="product-wrap-2 pro-glaucous-color mb-35 scroll-zoom">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img class="default-img" src="{{ url('/') }}/assets/img/product/hm9-pro-8.jpg" alt="">
-                                    <img class="hover-img" src="{{ url('/') }}/assets/img/product/hm9-pro-8.jpg" alt="">
-                                </a>
-                                <span class="glaucous">-10%</span>
-                                <div class="product-action-2">
-                                    <a title="Add To Cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-                                    <a title="Quick View" href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    <a title="Compare" href="#"><i class="fa fa-retweet"></i></a>
+                    @foreach ($produks as $prd)
+                        <div class="custom2-col-5">
+                            <div class="product-wrap-2 pro-glaucous-color mb-35 scroll-zoom">
+                                <div class="product-img">
+                                    <a href="product-details.html">
+                                        <img class="default-img" src="{{ $prd->picture ? url('/storage/'.$prd->picture) : url('/assets/img/product/hm9-pro-8.jpg') }}" alt="">
+                                        <img class="hover-img" src="{{ $prd->picture ? url('/storage/'.$prd->picture) : url('/assets/img/product/hm9-pro-8.jpg') }}" alt="">
+                                    </a>
+                                    {{-- <div class="product-action-2">
+                                        <a title="Add To Cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+                                        <a title="Quick View" href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-eye"></i></a>
+                                        <a title="Compare" href="#"><i class="fa fa-retweet"></i></a>
+                                    </div> --}}
                                 </div>
-                            </div>
-                            <div class="product-content-2">
-                                <div class="title-price-wrap-2">
-                                    <h3><a href="product-details.html">T- Shirt And Jeans</a></h3>
-                                    <div class="price-2">
-                                        <span>$ 60.00</span>
-                                        <span class="old">$ 60.00</span>
+                                <div class="product-content-2">
+                                    <div class="title-price-wrap-2">
+                                        <h3><a href="product-details.html">{{ $prd->name ?? '-' }}</a></h3>
+                                        <div class="price-2">
+                                            <span>Rp {{ number_format($prd->price, 0, ',', '.') }}</span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="pro-wishlist-2">
-                                    <a title="Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
+                                    {{-- <div class="pro-wishlist-2">
+                                        <a title="Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="custom2-col-5">
-                        <div class="product-wrap-2 pro-glaucous-color mb-35 scroll-zoom">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img class="default-img" src="{{ url('/') }}/assets/img/product/hm9-pro-7.jpg" alt="">
-                                    <img class="hover-img" src="{{ url('/') }}/assets/img/product/hm9-pro-7.jpg" alt="">
-                                </a>
-                                <div class="product-action-2">
-                                    <a title="Add To Cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-                                    <a title="Quick View" href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    <a title="Compare" href="#"><i class="fa fa-retweet"></i></a>
-                                </div>
-                            </div>
-                            <div class="product-content-2">
-                                <div class="title-price-wrap-2">
-                                    <h3><a href="product-details.html">T- Shirt And Jeans</a></h3>
-                                    <div class="price-2">
-                                        <span>$ 20.00</span>
-                                    </div>
-                                </div>
-                                <div class="pro-wishlist-2">
-                                    <a title="Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="custom2-col-5">
-                        <div class="product-wrap-2 pro-glaucous-color mb-35 scroll-zoom">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img class="default-img" src="{{ url('/') }}/assets/img/product/hm9-pro-6.jpg" alt="">
-                                    <img class="hover-img" src="{{ url('/') }}/assets/img/product/hm9-pro-6.jpg" alt="">
-                                </a>
-                                <span class="glaucous">New</span>
-                                <div class="product-action-2">
-                                    <a title="Add To Cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-                                    <a title="Quick View" href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    <a title="Compare" href="#"><i class="fa fa-retweet"></i></a>
-                                </div>
-                            </div>
-                            <div class="product-content-2">
-                                <div class="title-price-wrap-2">
-                                    <h3><a href="product-details.html">T- Shirt And Jeans</a></h3>
-                                    <div class="price-2">
-                                        <span>$ 30.00</span>
-                                    </div>
-                                </div>
-                                <div class="pro-wishlist-2">
-                                    <a title="Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="custom2-col-5">
-                        <div class="product-wrap-2 pro-glaucous-color mb-35 scroll-zoom">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img class="default-img" src="{{ url('/') }}/assets/img/product/hm9-pro-5.jpg" alt="">
-                                    <img class="hover-img" src="{{ url('/') }}/assets/img/product/hm9-pro-5.jpg" alt="">
-                                </a>
-                                <div class="product-action-2">
-                                    <a title="Add To Cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-                                    <a title="Quick View" href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    <a title="Compare" href="#"><i class="fa fa-retweet"></i></a>
-                                </div>
-                            </div>
-                            <div class="product-content-2">
-                                <div class="title-price-wrap-2">
-                                    <h3><a href="product-details.html">T- Shirt And Jeans</a></h3>
-                                    <div class="price-2">
-                                        <span>$ 40.00</span>
-                                    </div>
-                                </div>
-                                <div class="pro-wishlist-2">
-                                    <a title="Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="custom2-col-5">
-                        <div class="product-wrap-2 pro-glaucous-color mb-35 scroll-zoom">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img class="default-img" src="{{ url('/') }}/assets/img/product/hm9-pro-4.jpg" alt="">
-                                    <img class="hover-img" src="{{ url('/') }}/assets/img/product/hm9-pro-4.jpg" alt="">
-                                </a>
-                                <span class="glaucous">-20%</span>
-                                <div class="product-action-2">
-                                    <a title="Add To Cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-                                    <a title="Quick View" href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    <a title="Compare" href="#"><i class="fa fa-retweet"></i></a>
-                                </div>
-                            </div>
-                            <div class="product-content-2">
-                                <div class="title-price-wrap-2">
-                                    <h3><a href="product-details.html">T- Shirt And Jeans</a></h3>
-                                    <div class="price-2">
-                                        <span>$ 50.00</span>
-                                        <span class="old">$ 70.00</span>
-                                    </div>
-                                </div>
-                                <div class="pro-wishlist-2">
-                                    <a title="Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="custom2-col-5">
-                        <div class="product-wrap-2 pro-glaucous-color mb-35 scroll-zoom">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img class="default-img" src="{{ url('/') }}/assets/img/product/hm9-pro-3.jpg" alt="">
-                                    <img class="hover-img" src="{{ url('/') }}/assets/img/product/hm9-pro-3.jpg" alt="">
-                                </a>
-                                <div class="product-action-2">
-                                    <a title="Add To Cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-                                    <a title="Quick View" href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    <a title="Compare" href="#"><i class="fa fa-retweet"></i></a>
-                                </div>
-                            </div>
-                            <div class="product-content-2">
-                                <div class="title-price-wrap-2">
-                                    <h3><a href="product-details.html">T- Shirt And Jeans</a></h3>
-                                    <div class="price-2">
-                                        <span>$ 50.00</span>
-                                    </div>
-                                </div>
-                                <div class="pro-wishlist-2">
-                                    <a title="Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="custom2-col-5">
-                        <div class="product-wrap-2 pro-glaucous-color mb-35 scroll-zoom">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img class="default-img" src="{{ url('/') }}/assets/img/product/hm9-pro-2.jpg" alt="">
-                                    <img class="hover-img" src="{{ url('/') }}/assets/img/product/hm9-pro-2.jpg" alt="">
-                                </a>
-                                <span class="glaucous">New</span>
-                                <div class="product-action-2">
-                                    <a title="Add To Cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-                                    <a title="Quick View" href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    <a title="Compare" href="#"><i class="fa fa-retweet"></i></a>
-                                </div>
-                            </div>
-                            <div class="product-content-2">
-                                <div class="title-price-wrap-2">
-                                    <h3><a href="product-details.html">T- Shirt And Jeans</a></h3>
-                                    <div class="price-2">
-                                        <span>$ 60.00</span>
-                                    </div>
-                                </div>
-                                <div class="pro-wishlist-2">
-                                    <a title="Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="custom2-col-5">
-                        <div class="product-wrap-2 pro-glaucous-color mb-35 scroll-zoom">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img class="default-img" src="{{ url('/') }}/assets/img/product/hm9-pro-10.jpg" alt="">
-                                    <img class="hover-img" src="{{ url('/') }}/assets/img/product/hm9-pro-10.jpg" alt="">
-                                </a>
-                                <div class="product-action-2">
-                                    <a title="Add To Cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-                                    <a title="Quick View" href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    <a title="Compare" href="#"><i class="fa fa-retweet"></i></a>
-                                </div>
-                            </div>
-                            <div class="product-content-2">
-                                <div class="title-price-wrap-2">
-                                    <h3><a href="product-details.html">T- Shirt And Jeans</a></h3>
-                                    <div class="price-2">
-                                        <span>$ 70.00</span>
-                                    </div>
-                                </div>
-                                <div class="pro-wishlist-2">
-                                    <a title="Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="custom2-col-5">
-                        <div class="product-wrap-2 pro-glaucous-color mb-35 scroll-zoom">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img class="default-img" src="{{ url('/') }}/assets/img/product/hm9-pro-1.jpg" alt="">
-                                    <img class="hover-img" src="{{ url('/') }}/assets/img/product/hm9-pro-1.jpg" alt="">
-                                </a>
-                                <span class="glaucous">-30%</span>
-                                <div class="product-action-2">
-                                    <a title="Add To Cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-                                    <a title="Quick View" href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    <a title="Compare" href="#"><i class="fa fa-retweet"></i></a>
-                                </div>
-                            </div>
-                            <div class="product-content-2">
-                                <div class="title-price-wrap-2">
-                                    <h3><a href="product-details.html">T- Shirt And Jeans</a></h3>
-                                    <div class="price-2">
-                                        <span>$ 20.00</span>
-                                        <span class="old">$ 50.00</span>
-                                    </div>
-                                </div>
-                                <div class="pro-wishlist-2">
-                                    <a title="Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="custom2-col-5">
-                        <div class="product-wrap-2 pro-glaucous-color mb-35 scroll-zoom">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img class="default-img" src="{{ url('/') }}/assets/img/product/hm9-pro-9.jpg" alt="">
-                                    <img class="hover-img" src="{{ url('/') }}/assets/img/product/hm9-pro-9.jpg" alt="">
-                                </a>
-                                <div class="product-action-2">
-                                    <a title="Add To Cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-                                    <a title="Quick View" href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    <a title="Compare" href="#"><i class="fa fa-retweet"></i></a>
-                                </div>
-                            </div>
-                            <div class="product-content-2">
-                                <div class="title-price-wrap-2">
-                                    <h3><a href="product-details.html">T- Shirt And Jeans</a></h3>
-                                    <div class="price-2">
-                                        <span>$ 60.00</span>
-                                        <span class="old">$ 60.00</span>
-                                    </div>
-                                </div>
-                                <div class="pro-wishlist-2">
-                                    <a title="Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="tab-pane active" id="product-2">
-                <div class="custom-row-4">
-                    <div class="custom2-col-5">
-                        <div class="product-wrap-2 pro-glaucous-color mb-35 scroll-zoom">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img class="default-img" src="{{ url('/') }}/assets/img/product/hm9-pro-1.jpg" alt="">
-                                    <img class="hover-img" src="{{ url('/') }}/assets/img/product/hm9-pro-1.jpg" alt="">
-                                </a>
-                                <span class="glaucous">-10%</span>
-                                <div class="product-action-2">
-                                    <a title="Add To Cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-                                    <a title="Quick View" href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    <a title="Compare" href="#"><i class="fa fa-retweet"></i></a>
-                                </div>
-                            </div>
-                            <div class="product-content-2">
-                                <div class="title-price-wrap-2">
-                                    <h3><a href="product-details.html">T- Shirt And Jeans</a></h3>
-                                    <div class="price-2">
-                                        <span>$ 60.00</span>
-                                        <span class="old">$ 60.00</span>
-                                    </div>
-                                </div>
-                                <div class="pro-wishlist-2">
-                                    <a title="Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="custom2-col-5">
-                        <div class="product-wrap-2 pro-glaucous-color mb-35 scroll-zoom">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img class="default-img" src="{{ url('/') }}/assets/img/product/hm9-pro-2.jpg" alt="">
-                                    <img class="hover-img" src="{{ url('/') }}/assets/img/product/hm9-pro-2.jpg" alt="">
-                                </a>
-                                <div class="product-action-2">
-                                    <a title="Add To Cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-                                    <a title="Quick View" href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    <a title="Compare" href="#"><i class="fa fa-retweet"></i></a>
-                                </div>
-                            </div>
-                            <div class="product-content-2">
-                                <div class="title-price-wrap-2">
-                                    <h3><a href="product-details.html">T- Shirt And Jeans</a></h3>
-                                    <div class="price-2">
-                                        <span>$ 20.00</span>
-                                    </div>
-                                </div>
-                                <div class="pro-wishlist-2">
-                                    <a title="Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="custom2-col-5">
-                        <div class="product-wrap-2 pro-glaucous-color mb-35 scroll-zoom">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img class="default-img" src="{{ url('/') }}/assets/img/product/hm9-pro-3.jpg" alt="">
-                                    <img class="hover-img" src="{{ url('/') }}/assets/img/product/hm9-pro-3.jpg" alt="">
-                                </a>
-                                <span class="glaucous">New</span>
-                                <div class="product-action-2">
-                                    <a title="Add To Cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-                                    <a title="Quick View" href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    <a title="Compare" href="#"><i class="fa fa-retweet"></i></a>
-                                </div>
-                            </div>
-                            <div class="product-content-2">
-                                <div class="title-price-wrap-2">
-                                    <h3><a href="product-details.html">T- Shirt And Jeans</a></h3>
-                                    <div class="price-2">
-                                        <span>$ 30.00</span>
-                                    </div>
-                                </div>
-                                <div class="pro-wishlist-2">
-                                    <a title="Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="custom2-col-5">
-                        <div class="product-wrap-2 pro-glaucous-color mb-35 scroll-zoom">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img class="default-img" src="{{ url('/') }}/assets/img/product/hm9-pro-4.jpg" alt="">
-                                    <img class="hover-img" src="{{ url('/') }}/assets/img/product/hm9-pro-4.jpg" alt="">
-                                </a>
-                                <div class="product-action-2">
-                                    <a title="Add To Cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-                                    <a title="Quick View" href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    <a title="Compare" href="#"><i class="fa fa-retweet"></i></a>
-                                </div>
-                            </div>
-                            <div class="product-content-2">
-                                <div class="title-price-wrap-2">
-                                    <h3><a href="product-details.html">T- Shirt And Jeans</a></h3>
-                                    <div class="price-2">
-                                        <span>$ 40.00</span>
-                                    </div>
-                                </div>
-                                <div class="pro-wishlist-2">
-                                    <a title="Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="custom2-col-5">
-                        <div class="product-wrap-2 pro-glaucous-color mb-35 scroll-zoom">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img class="default-img" src="{{ url('/') }}/assets/img/product/hm9-pro-5.jpg" alt="">
-                                    <img class="hover-img" src="{{ url('/') }}/assets/img/product/hm9-pro-5.jpg" alt="">
-                                </a>
-                                <span class="glaucous">-20%</span>
-                                <div class="product-action-2">
-                                    <a title="Add To Cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-                                    <a title="Quick View" href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    <a title="Compare" href="#"><i class="fa fa-retweet"></i></a>
-                                </div>
-                            </div>
-                            <div class="product-content-2">
-                                <div class="title-price-wrap-2">
-                                    <h3><a href="product-details.html">T- Shirt And Jeans</a></h3>
-                                    <div class="price-2">
-                                        <span>$ 50.00</span>
-                                        <span class="old">$ 70.00</span>
-                                    </div>
-                                </div>
-                                <div class="pro-wishlist-2">
-                                    <a title="Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="custom2-col-5">
-                        <div class="product-wrap-2 pro-glaucous-color mb-35 scroll-zoom">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img class="default-img" src="{{ url('/') }}/assets/img/product/hm9-pro-6.jpg" alt="">
-                                    <img class="hover-img" src="{{ url('/') }}/assets/img/product/hm9-pro-6.jpg" alt="">
-                                </a>
-                                <div class="product-action-2">
-                                    <a title="Add To Cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-                                    <a title="Quick View" href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    <a title="Compare" href="#"><i class="fa fa-retweet"></i></a>
-                                </div>
-                            </div>
-                            <div class="product-content-2">
-                                <div class="title-price-wrap-2">
-                                    <h3><a href="product-details.html">T- Shirt And Jeans</a></h3>
-                                    <div class="price-2">
-                                        <span>$ 50.00</span>
-                                    </div>
-                                </div>
-                                <div class="pro-wishlist-2">
-                                    <a title="Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="custom2-col-5">
-                        <div class="product-wrap-2 pro-glaucous-color mb-35 scroll-zoom">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img class="default-img" src="{{ url('/') }}/assets/img/product/hm9-pro-7.jpg" alt="">
-                                    <img class="hover-img" src="{{ url('/') }}/assets/img/product/hm9-pro-7.jpg" alt="">
-                                </a>
-                                <span class="glaucous">New</span>
-                                <div class="product-action-2">
-                                    <a title="Add To Cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-                                    <a title="Quick View" href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    <a title="Compare" href="#"><i class="fa fa-retweet"></i></a>
-                                </div>
-                            </div>
-                            <div class="product-content-2">
-                                <div class="title-price-wrap-2">
-                                    <h3><a href="product-details.html">T- Shirt And Jeans</a></h3>
-                                    <div class="price-2">
-                                        <span>$ 60.00</span>
-                                    </div>
-                                </div>
-                                <div class="pro-wishlist-2">
-                                    <a title="Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="custom2-col-5">
-                        <div class="product-wrap-2 pro-glaucous-color mb-35 scroll-zoom">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img class="default-img" src="{{ url('/') }}/assets/img/product/hm9-pro-8.jpg" alt="">
-                                    <img class="hover-img" src="{{ url('/') }}/assets/img/product/hm9-pro-8.jpg" alt="">
-                                </a>
-                                <div class="product-action-2">
-                                    <a title="Add To Cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-                                    <a title="Quick View" href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    <a title="Compare" href="#"><i class="fa fa-retweet"></i></a>
-                                </div>
-                            </div>
-                            <div class="product-content-2">
-                                <div class="title-price-wrap-2">
-                                    <h3><a href="product-details.html">T- Shirt And Jeans</a></h3>
-                                    <div class="price-2">
-                                        <span>$ 70.00</span>
-                                    </div>
-                                </div>
-                                <div class="pro-wishlist-2">
-                                    <a title="Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="custom2-col-5">
-                        <div class="product-wrap-2 pro-glaucous-color mb-35 scroll-zoom">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img class="default-img" src="{{ url('/') }}/assets/img/product/hm9-pro-9.jpg" alt="">
-                                    <img class="hover-img" src="{{ url('/') }}/assets/img/product/hm9-pro-9.jpg" alt="">
-                                </a>
-                                <span class="glaucous">-30%</span>
-                                <div class="product-action-2">
-                                    <a title="Add To Cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-                                    <a title="Quick View" href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    <a title="Compare" href="#"><i class="fa fa-retweet"></i></a>
-                                </div>
-                            </div>
-                            <div class="product-content-2">
-                                <div class="title-price-wrap-2">
-                                    <h3><a href="product-details.html">T- Shirt And Jeans</a></h3>
-                                    <div class="price-2">
-                                        <span>$ 20.00</span>
-                                        <span class="old">$ 50.00</span>
-                                    </div>
-                                </div>
-                                <div class="pro-wishlist-2">
-                                    <a title="Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="custom2-col-5">
-                        <div class="product-wrap-2 pro-glaucous-color mb-35 scroll-zoom">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img class="default-img" src="{{ url('/') }}/assets/img/product/hm9-pro-10.jpg" alt="">
-                                    <img class="hover-img" src="{{ url('/') }}/assets/img/product/hm9-pro-10.jpg" alt="">
-                                </a>
-                                <div class="product-action-2">
-                                    <a title="Add To Cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-                                    <a title="Quick View" href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    <a title="Compare" href="#"><i class="fa fa-retweet"></i></a>
-                                </div>
-                            </div>
-                            <div class="product-content-2">
-                                <div class="title-price-wrap-2">
-                                    <h3><a href="product-details.html">T- Shirt And Jeans</a></h3>
-                                    <div class="price-2">
-                                        <span>$ 60.00</span>
-                                        <span class="old">$ 60.00</span>
-                                    </div>
-                                </div>
-                                <div class="pro-wishlist-2">
-                                    <a title="Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="tab-pane" id="product-3">
-                <div class="custom-row-4">
-                    <div class="custom2-col-5">
-                        <div class="product-wrap-2 pro-glaucous-color mb-35 scroll-zoom">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img class="default-img" src="{{ url('/') }}/assets/img/product/hm9-pro-10.jpg" alt="">
-                                    <img class="hover-img" src="{{ url('/') }}/assets/img/product/hm9-pro-10.jpg" alt="">
-                                </a>
-                                <span class="glaucous">-10%</span>
-                                <div class="product-action-2">
-                                    <a title="Add To Cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-                                    <a title="Quick View" href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    <a title="Compare" href="#"><i class="fa fa-retweet"></i></a>
-                                </div>
-                            </div>
-                            <div class="product-content-2">
-                                <div class="title-price-wrap-2">
-                                    <h3><a href="product-details.html">T- Shirt And Jeans</a></h3>
-                                    <div class="price-2">
-                                        <span>$ 60.00</span>
-                                        <span class="old">$ 60.00</span>
-                                    </div>
-                                </div>
-                                <div class="pro-wishlist-2">
-                                    <a title="Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="custom2-col-5">
-                        <div class="product-wrap-2 pro-glaucous-color mb-35 scroll-zoom">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img class="default-img" src="{{ url('/') }}/assets/img/product/hm9-pro-9.jpg" alt="">
-                                    <img class="hover-img" src="{{ url('/') }}/assets/img/product/hm9-pro-9.jpg" alt="">
-                                </a>
-                                <div class="product-action-2">
-                                    <a title="Add To Cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-                                    <a title="Quick View" href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    <a title="Compare" href="#"><i class="fa fa-retweet"></i></a>
-                                </div>
-                            </div>
-                            <div class="product-content-2">
-                                <div class="title-price-wrap-2">
-                                    <h3><a href="product-details.html">T- Shirt And Jeans</a></h3>
-                                    <div class="price-2">
-                                        <span>$ 20.00</span>
-                                    </div>
-                                </div>
-                                <div class="pro-wishlist-2">
-                                    <a title="Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="custom2-col-5">
-                        <div class="product-wrap-2 pro-glaucous-color mb-35 scroll-zoom">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img class="default-img" src="{{ url('/') }}/assets/img/product/hm9-pro-8.jpg" alt="">
-                                    <img class="hover-img" src="{{ url('/') }}/assets/img/product/hm9-pro-8.jpg" alt="">
-                                </a>
-                                <span class="glaucous">New</span>
-                                <div class="product-action-2">
-                                    <a title="Add To Cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-                                    <a title="Quick View" href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    <a title="Compare" href="#"><i class="fa fa-retweet"></i></a>
-                                </div>
-                            </div>
-                            <div class="product-content-2">
-                                <div class="title-price-wrap-2">
-                                    <h3><a href="product-details.html">T- Shirt And Jeans</a></h3>
-                                    <div class="price-2">
-                                        <span>$ 30.00</span>
-                                    </div>
-                                </div>
-                                <div class="pro-wishlist-2">
-                                    <a title="Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="custom2-col-5">
-                        <div class="product-wrap-2 pro-glaucous-color mb-35 scroll-zoom">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img class="default-img" src="{{ url('/') }}/assets/img/product/hm9-pro-7.jpg" alt="">
-                                    <img class="hover-img" src="{{ url('/') }}/assets/img/product/hm9-pro-7.jpg" alt="">
-                                </a>
-                                <div class="product-action-2">
-                                    <a title="Add To Cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-                                    <a title="Quick View" href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    <a title="Compare" href="#"><i class="fa fa-retweet"></i></a>
-                                </div>
-                            </div>
-                            <div class="product-content-2">
-                                <div class="title-price-wrap-2">
-                                    <h3><a href="product-details.html">T- Shirt And Jeans</a></h3>
-                                    <div class="price-2">
-                                        <span>$ 40.00</span>
-                                    </div>
-                                </div>
-                                <div class="pro-wishlist-2">
-                                    <a title="Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="custom2-col-5">
-                        <div class="product-wrap-2 pro-glaucous-color mb-35 scroll-zoom">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img class="default-img" src="{{ url('/') }}/assets/img/product/hm9-pro-6.jpg" alt="">
-                                    <img class="hover-img" src="{{ url('/') }}/assets/img/product/hm9-pro-6.jpg" alt="">
-                                </a>
-                                <span class="glaucous">-20%</span>
-                                <div class="product-action-2">
-                                    <a title="Add To Cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-                                    <a title="Quick View" href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    <a title="Compare" href="#"><i class="fa fa-retweet"></i></a>
-                                </div>
-                            </div>
-                            <div class="product-content-2">
-                                <div class="title-price-wrap-2">
-                                    <h3><a href="product-details.html">T- Shirt And Jeans</a></h3>
-                                    <div class="price-2">
-                                        <span>$ 50.00</span>
-                                        <span class="old">$ 70.00</span>
-                                    </div>
-                                </div>
-                                <div class="pro-wishlist-2">
-                                    <a title="Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="custom2-col-5">
-                        <div class="product-wrap-2 pro-glaucous-color mb-35 scroll-zoom">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img class="default-img" src="{{ url('/') }}/assets/img/product/hm9-pro-5.jpg" alt="">
-                                    <img class="hover-img" src="{{ url('/') }}/assets/img/product/hm9-pro-5.jpg" alt="">
-                                </a>
-                                <div class="product-action-2">
-                                    <a title="Add To Cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-                                    <a title="Quick View" href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    <a title="Compare" href="#"><i class="fa fa-retweet"></i></a>
-                                </div>
-                            </div>
-                            <div class="product-content-2">
-                                <div class="title-price-wrap-2">
-                                    <h3><a href="product-details.html">T- Shirt And Jeans</a></h3>
-                                    <div class="price-2">
-                                        <span>$ 50.00</span>
-                                    </div>
-                                </div>
-                                <div class="pro-wishlist-2">
-                                    <a title="Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="custom2-col-5">
-                        <div class="product-wrap-2 pro-glaucous-color mb-35 scroll-zoom">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img class="default-img" src="{{ url('/') }}/assets/img/product/hm9-pro-4.jpg" alt="">
-                                    <img class="hover-img" src="{{ url('/') }}/assets/img/product/hm9-pro-4.jpg" alt="">
-                                </a>
-                                <span class="glaucous">New</span>
-                                <div class="product-action-2">
-                                    <a title="Add To Cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-                                    <a title="Quick View" href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    <a title="Compare" href="#"><i class="fa fa-retweet"></i></a>
-                                </div>
-                            </div>
-                            <div class="product-content-2">
-                                <div class="title-price-wrap-2">
-                                    <h3><a href="product-details.html">T- Shirt And Jeans</a></h3>
-                                    <div class="price-2">
-                                        <span>$ 60.00</span>
-                                    </div>
-                                </div>
-                                <div class="pro-wishlist-2">
-                                    <a title="Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="custom2-col-5">
-                        <div class="product-wrap-2 pro-glaucous-color mb-35 scroll-zoom">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img class="default-img" src="{{ url('/') }}/assets/img/product/hm9-pro-3.jpg" alt="">
-                                    <img class="hover-img" src="{{ url('/') }}/assets/img/product/hm9-pro-3.jpg" alt="">
-                                </a>
-                                <div class="product-action-2">
-                                    <a title="Add To Cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-                                    <a title="Quick View" href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    <a title="Compare" href="#"><i class="fa fa-retweet"></i></a>
-                                </div>
-                            </div>
-                            <div class="product-content-2">
-                                <div class="title-price-wrap-2">
-                                    <h3><a href="product-details.html">T- Shirt And Jeans</a></h3>
-                                    <div class="price-2">
-                                        <span>$ 70.00</span>
-                                    </div>
-                                </div>
-                                <div class="pro-wishlist-2">
-                                    <a title="Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="custom2-col-5">
-                        <div class="product-wrap-2 pro-glaucous-color mb-35 scroll-zoom">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img class="default-img" src="{{ url('/') }}/assets/img/product/hm9-pro-2.jpg" alt="">
-                                    <img class="hover-img" src="{{ url('/') }}/assets/img/product/hm9-pro-2.jpg" alt="">
-                                </a>
-                                <span class="glaucous">-30%</span>
-                                <div class="product-action-2">
-                                    <a title="Add To Cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-                                    <a title="Quick View" href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    <a title="Compare" href="#"><i class="fa fa-retweet"></i></a>
-                                </div>
-                            </div>
-                            <div class="product-content-2">
-                                <div class="title-price-wrap-2">
-                                    <h3><a href="product-details.html">T- Shirt And Jeans</a></h3>
-                                    <div class="price-2">
-                                        <span>$ 20.00</span>
-                                        <span class="old">$ 50.00</span>
-                                    </div>
-                                </div>
-                                <div class="pro-wishlist-2">
-                                    <a title="Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="custom2-col-5">
-                        <div class="product-wrap-2 pro-glaucous-color mb-35 scroll-zoom">
-                            <div class="product-img">
-                                <a href="product-details.html">
-                                    <img class="default-img" src="{{ url('/') }}/assets/img/product/hm9-pro-1.jpg" alt="">
-                                    <img class="hover-img" src="{{ url('/') }}/assets/img/product/hm9-pro-1.jpg" alt="">
-                                </a>
-                                <div class="product-action-2">
-                                    <a title="Add To Cart" href="#"><i class="fa fa-shopping-cart"></i></a>
-                                    <a title="Quick View" href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-eye"></i></a>
-                                    <a title="Compare" href="#"><i class="fa fa-retweet"></i></a>
-                                </div>
-                            </div>
-                            <div class="product-content-2">
-                                <div class="title-price-wrap-2">
-                                    <h3><a href="product-details.html">T- Shirt And Jeans</a></h3>
-                                    <div class="price-2">
-                                        <span>$ 60.00</span>
-                                        <span class="old">$ 60.00</span>
-                                    </div>
-                                </div>
-                                <div class="pro-wishlist-2">
-                                    <a title="Wishlist" href="wishlist.html"><i class="fa fa-heart-o"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -1241,26 +154,18 @@
 <div class="banner-area pb-100">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <div class="single-banner-2 mb-30">
-                    <a href="product-details.html"><img src="{{ url('/') }}/assets/img/banner/banner-8.png" alt=""></a>
-                    <div class="banner-content-2">
-                        <h3>HeadPhone</h3>
-                        <h4>Starting at <span>$99.00</span></h4>
-                        <a href="product-details.html"><i class="fa fa-long-arrow-right"></i></a>
+            @foreach (json_decode($lp->section_promotion) as $item)
+                <div class="col-lg-6 col-md-6">
+                    <div class="single-banner-2 mb-30">
+                        <a href="javascript:void(0)"><img src="{{ $item->background ? url('/storage/'.$item->background) : url('/assets/img/banner/banner-8.png') }}" alt=""></a>
+                        <div class="banner-content-2">
+                            {{-- <h5>{{ $item->sub_title ?? '' }}</h5> --}}
+                            <h3 style="font-weight: 600;">{{ $item->title ?? '' }}</h3>
+                            {{-- <a href="javascript:void(0)"><i class="fa fa-long-arrow-right"></i></a> --}}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <div class="single-banner-2 mb-30">
-                    <a href="product-details.html"><img src="{{ url('/') }}/assets/img/banner/banner-9.png" alt=""></a>
-                    <div class="banner-content-2">
-                        <h3>HeadPhone</h3>
-                        <h4>Starting at <span>$79.00</span></h4>
-                        <a href="product-details.html"><i class="fa fa-long-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </div>
@@ -1269,24 +174,16 @@
         <div class="row">
             <div class="col-lg-10 ml-auto mr-auto">
                 <div class="testimonial-active owl-carousel nav-style-1 nav-testi-style">
-                    <div class="single-testimonial text-center">
-                        <img src="{{ url('/') }}/assets/img/testimonial/testi-1.png" alt="">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                        <div class="client-info">
-                            <i class="fa fa-map-signs"></i>
-                            <h5>Grace Alvarado</h5>
-                            <span>Customer</span>
+                    @foreach (json_decode($lp->section_review) as $item)
+                        <div class="single-testimonial text-center">
+                            <img src="{{$item->avatar ? url('/storage/'.$item->avatar) : url('/') }}/assets/img/testimonial/testi-1.png" alt="">
+                            <p>{{ $item->review ?? '' }}</p>
+                            <div class="client-info">
+                                <i class="fa fa-map-signs"></i>
+                                <h5>{{ $item->name ?? '' }}</h5>
+                            </div>
                         </div>
-                    </div>
-                    <div class="single-testimonial text-center">
-                        <img src="{{ url('/') }}/assets/img/testimonial/testi-1.png" alt="">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                        <div class="client-info">
-                            <i class="fa fa-map-signs"></i>
-                            <h5>Grace Alvarado</h5>
-                            <span>Customer</span>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -1313,145 +210,29 @@
         </div>
     </div>
 </div>
-{{-- <div class="blog-area pb-55">
-    <div class="container">
-        <div class="section-title-2 text-center mb-60">
-            <h2>Our Blog</h2>
-            <p>Lorem ipsum dolor sit amet conse ctetu.</p>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="blog-wrap mb-30 scroll-zoom">
-                    <div class="blog-img">
-                        <a href="blog-details.html"><img src="{{ url('/') }}/assets/img/blog/blog-1.jpg" alt=""></a>
-                        <span class="purple">Lifestyle</span>
-                    </div>
-                    <div class="blog-content-wrap">
-                        <div class="blog-content text-center">
-                            <h3><a href="blog-details.html">Lorem ipsum dolor sit <br> amet consec.</a></h3>
-                            <span>By Shop <a href="#">Admin</a></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="blog-wrap mb-30 scroll-zoom">
-                    <div class="blog-img">
-                        <a href="blog-details.html"><img src="{{ url('/') }}/assets/img/blog/blog-2.jpg" alt=""></a>
-                        <span class="pink">Lifestyle</span>
-                    </div>
-                    <div class="blog-content-wrap">
-                        <div class="blog-content text-center">
-                            <h3><a href="blog-details.html">Lorem ipsum dolor sit <br> amet consec.</a></h3>
-                            <span>By Shop <a href="#">Admin</a></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="blog-wrap mb-30 scroll-zoom">
-                    <div class="blog-img">
-                        <a href="blog-details.html"><img src="{{ url('/') }}/assets/img/blog/blog-3.jpg" alt=""></a>
-                        <span class="purple">Lifestyle</span>
-                    </div>
-                    <div class="blog-content-wrap">
-                        <div class="blog-content text-center">
-                            <h3><a href="blog-details.html">Lorem ipsum dolor sit <br> amet consec.</a></h3>
-                            <span>By Shop <a href="#">Admin</a></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> --}}
 <footer class="footer-area bg-gray pt-100 pb-70">
     <div class="container">
         <div class="row">
             <div class="col-lg-2 col-md-4 col-sm-4">
                 <div class="copyright mb-30">
                     <div class="footer-logo">
-                        <a href="index.html">
-                            <img alt="" src="{{ url('/') }}/assets/img/logo/logo.png">
+                        <a href="javascript:void(0)">
+                            @if($lp->website_logo)
+                                <img alt="" src="{{ asset('storage/'.$lp->website_logo) }}">
+                            @else
+                                <h2 style="font-weight: 600; letter-spacing: 3px;">{{ $lp->website_title }}</h2>
+                            @endif
                         </a>
                     </div>
                     <p>© 2019 <a href="#">Flone</a>.<br> All Rights Reserved</p>
                 </div>
             </div>
-            {{-- <div class="col-lg-2 col-md-4 col-sm-4">
-                <div class="footer-widget mb-30 ml-30">
-                    <div class="footer-title">
-                        <h3>ABOUT US</h3>
-                    </div>
-                    <div class="footer-list">
-                        <ul>
-                            <li><a href="about.html">About us</a></li>
-                            <li><a href="#">Store location</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                            <li><a href="#">Orders tracking</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-4 col-sm-4">
-                <div class="footer-widget mb-30 ml-50">
-                    <div class="footer-title">
-                        <h3>USEFUL LINKS</h3>
-                    </div>
-                    <div class="footer-list">
-                        <ul>
-                            <li><a href="#">Returns</a></li>
-                            <li><a href="#">Support Policy</a></li>
-                            <li><a href="#">Size guide</a></li>
-                            <li><a href="#">FAQs</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-6 col-sm-6">
-                <div class="footer-widget mb-30 ml-75">
-                    <div class="footer-title">
-                        <h3>FOLLOW US</h3>
-                    </div>
-                    <div class="footer-list">
-                        <ul>
-                            <li><a href="#">Facebook</a></li>
-                            <li><a href="#">Twitter</a></li>
-                            <li><a href="#">Instagram</a></li>
-                            <li><a href="#">Youtube</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="footer-widget mb-30 ml-70">
-                    <div class="footer-title">
-                        <h3>SUBSCRIBE</h3>
-                    </div>
-                    <div class="subscribe-style">
-                        <p>Get E-mail updates about our latest shop and special offers.</p>
-                        <div id="mc_embed_signup" class="subscribe-form">
-                            <form id="mc-embedded-subscribe-form" class="validate" novalidate="" target="_blank" name="mc-embedded-subscribe-form" method="post" action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef">
-                                <div id="mc_embed_signup_scroll" class="mc-form">
-                                    <input class="email" type="email" required="" placeholder="Enter your email here.." name="EMAIL" value="">
-                                    <div class="mc-news" aria-hidden="true">
-                                        <input type="text" value="" tabindex="-1" name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef">
-                                    </div>
-                                    <div class="clear">
-                                        <input id="mc-embedded-subscribe" class="button" type="submit" name="subscribe" value="Subscribe">
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
         </div>
     </div>
 </footer>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+{{-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -1582,7 +363,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 <!-- Modal end -->
 
 <!-- JS
